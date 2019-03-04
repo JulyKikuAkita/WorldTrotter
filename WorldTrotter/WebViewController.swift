@@ -21,7 +21,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = URL(string: "https://www.bignerdranch.com")!
+        let url = URL(string: "https://www.onthesnow.com/united-states/skireport.html")!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
     }

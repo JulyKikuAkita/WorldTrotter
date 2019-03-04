@@ -1,0 +1,30 @@
+
+/* Class = "UITabBarItem"; badgeValue = "Web"; ObjectID = "6Mp-er-mlA"; */
+"6Mp-er-mlA.badgeValue" = "El web";
+
+/* Class = "UIViewController"; title = "Map"; ObjectID = "7Bi-6w-ibT"; */
+"7Bi-6w-ibT.title" = "Mapa";
+
+/* Class = "UILabel"; text = "degrees Celsius"; ObjectID = "E6B-KH-xLs"; */
+"E6B-KH-xLs.text" = "grados Celsius";
+
+/* Class = "UITabBarItem"; title = "map"; ObjectID = "IfH-g7-ec5"; */
+"IfH-g7-ec5.title" = "Mapa";
+
+/* Class = "UILabel"; text = "100"; ObjectID = "U5H-gS-255"; */
+"U5H-gS-255.text" = "100";
+
+/* Class = "UIViewController"; title = "Web"; ObjectID = "eDH-o3-ODX"; */
+"eDH-o3-ODX.title" = "El web";
+
+/* Class = "UILabel"; text = "is really"; ObjectID = "hLE-Av-4Rj"; */
+"hLE-Av-4Rj.text" = "es realmente";
+
+/* Class = "UITextField"; placeholder = "value"; ObjectID = "iLd-Hd-s4b"; */
+"iLd-Hd-s4b.placeholder" = "valor";
+
+/* Class = "UILabel"; text = "degrees Fahrenheit"; ObjectID = "l4k-QV-kHj"; */
+"l4k-QV-kHj.text" = "grado Fahrenheit";
+
+/* Class = "UITabBarItem"; title = "Convert"; ObjectID = "xza-hu-Mbp"; */
+"xza-hu-Mbp.title" = "Convertir";

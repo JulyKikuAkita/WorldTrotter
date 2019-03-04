@@ -34,8 +34,8 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func fahrenheitFieldEditingChanged(_ textField: UITextField) {
-        if let text = textField.text, let value = Double(text) {
-            fahrenheitValue = Measurement(value: value, unit: .fahrenheit)
+        if let text = textField.text, let number = numberFormatter.number(from: text) {
+            fahrenheitValue = Measurement(value: number.doubleValue, unit: .fahrenheit)
         } else {
             fahrenheitValue = nil
         }
@@ -65,20 +65,18 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
-        print("Current text: \(textField.text)")
-        print("Replacement text: \(string)")
-        let existingTextHasDEcimalSeparator = textField.text?.range(of: ".")
-        let replacementTextHasDecimalSeparator = string.range(of: ".")
-        let digitSet = NSCharacterSet.decimalDigits
+        // debug purpose
+//        print("Current text: \(textField.text)")
+//        print("Replacement text: \(string)")
+        let currentLocale = Locale.current
+        let decimalSeperator = currentLocale.decimalSeparator ?? "."
+        
+        let existingTextHasDEcimalSeparator = textField.text?.range(of: decimalSeperator)
+        let replacementTextHasDecimalSeparator = string.range(of: decimalSeperator)
         
         // avoid more than one decimal point
         if existingTextHasDEcimalSeparator != nil, replacementTextHasDecimalSeparator != nil { return false }
         
-        // avoid user input non digit
-        for char in string.unicodeScalars {
-            if char == "." { continue }
-            if !digitSet.contains(char) { return false }
-        }
         return true
     }
     
